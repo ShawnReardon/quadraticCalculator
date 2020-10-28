@@ -1,3 +1,4 @@
+// Adpated from https://www.geeksforgeeks.org/python-program-to-solve-quadratic-equation/
 function getInput () {
     // Driver Program
     a = game.askForNumber("A = ")
@@ -22,17 +23,17 @@ function equationroots (a: number, b: number, c: number) {
         console.log(" real and different roots ")
         console.log((0 - b + sqrt_val) / (2 * a))
         console.log((0 - b - sqrt_val) / (2 * a))
-        game.showLongText(" real and different roots " + (0 - b + sqrt_val) / (2 * a) + " or " + (0 - b - sqrt_val) / (2 * a), DialogLayout.Top)
+        game.showLongText(" real and different roots " + ("" + (0 - b + sqrt_val) / (2 * a)) + " or " + ("" + (0 - b - sqrt_val) / (2 * a)), DialogLayout.Top)
     } else if (dis == 0) {
         console.log(" real and same roots")
         console.log((0 - b) / (2 * a))
-        game.showLongText(" real and same roots" + "" + (0 - b) / (2 * a), DialogLayout.Top)
+        game.showLongText(" real and same roots" + "" + ("" + (0 - b) / (2 * a)), DialogLayout.Top)
     } else {
         // when discriminant is less than 0
         console.log("Complex Roots")
-        console.log("" + (0 - b) / (2 * a) + " + i" + sqrt_val)
-        console.log("" + (0 - b) / (2 * a) + " - i" + sqrt_val)
-        game.showLongText("" + (0 - b) / (2 * a) + " - i" + sqrt_val + " or" + ("" + (0 - b) / (2 * a) + " + i" + sqrt_val), DialogLayout.Top)
+        console.log("" + (0 - b) / (2 * a) + " + i" + ("" + sqrt_val))
+        console.log("" + (0 - b) / (2 * a) + " - i" + ("" + sqrt_val))
+        game.showLongText("" + (0 - b) / (2 * a) + " - i" + ("" + sqrt_val) + " or" + ("" + (0 - b) / (2 * a) + " + i" + ("" + sqrt_val)), DialogLayout.Top)
     }
 }
 let sqrt_val = 0
