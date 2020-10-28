@@ -1,3 +1,17 @@
+function getInput () {
+    // Driver Program
+    a = game.askForNumber("A = ")
+    b = game.askForNumber("B =")
+    c = game.askForNumber("C =")
+    // If a is 0, then incorrect equation
+    if (a == 0) {
+        console.log("Input correct quadratic equation")
+        game.showLongText("Input correct quadratic equation", DialogLayout.Top)
+        getInput()
+    } else {
+        equationroots(a, b, c)
+    }
+}
 // function for finding roots
 function equationroots (a: number, b: number, c: number) {
     // calculating discriminant using formula
@@ -23,13 +37,7 @@ function equationroots (a: number, b: number, c: number) {
 }
 let sqrt_val = 0
 let dis = 0
-// Driver Program
-let a = game.askForNumber("A = ")
-let b = game.askForNumber("B =")
-let c = game.askForNumber("C =")
-// If a is 0, then incorrect equation
-if (a == 0) {
-    console.log("Input correct quadratic equation")
-} else {
-    equationroots(a, b, c)
-}
+let c = 0
+let b = 0
+let a = 0
+getInput()
